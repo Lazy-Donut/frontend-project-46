@@ -1,0 +1,32 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "The second JavaScript project",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lazy-Donut/frontend-project-46.git"
+  },
+  "author": "Lazy Donut",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lazy-Donut/frontend-project-46/issues"
+  },
+  "homepage": "https://github.com/Lazy-Donut/frontend-project-46#readme",
+  "dependencies": {
+    "commander": "^11.0.0",
+    "lodash": "^4.17.21"
+  },
+  "bin": {
+    "gendiff": "bin/gendiff.js"
+  },
+  "devDependencies": {
+    "eslint": "^8.55.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0"
+  }
+}
