@@ -2,7 +2,7 @@
 import { Command } from 'commander';
 import { cwd } from 'node:process';
 import path from 'node:path';
-import { genDiff } from '../src/index.js';
+import genDiff from '../src/index.js';
 
 const program = new Command();
 
@@ -14,9 +14,9 @@ program
   .option('-f, --format <type>', 'output format')
   .action((filepath1, filepath2) => {
     const fixtures = path.resolve(cwd(), './__fixtures__');
-    filepath1 = path.resolve(fixtures, filepath1);
-    filepath2 = path.resolve(fixtures, filepath2);
-    console.log(genDiff(filepath1, filepath2));
+    const file1 = path.resolve(fixtures, filepath1);
+    const file2 = path.resolve(fixtures, filepath2);
+    console.log(genDiff(file1, file2));
   });
 
 program.parse();
