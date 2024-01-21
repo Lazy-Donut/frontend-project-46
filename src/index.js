@@ -1,19 +1,22 @@
 import { readFileSync } from 'node:fs';
 import _ from 'lodash';
 
-const getReadyString = (object) => object.map((element) => {
-  let resultString = '';
-  if (element.status === 'deleted') {
-    resultString = `- ${element.key}: ${element.value}`;
-  } else if (element.status === 'added') {
-    resultString = `+ ${element.key}: ${element.value}`;
-  } else if (element.status === 'changed') {
-    resultString = `- ${element.key}: ${element.valueFirst}\n+ ${element.key}: ${element.valueSecond}`;
-  } else if (element.status === 'unchanged') {
-    resultString = `  ${element.key}: ${element.value}`;
-  }
-  return resultString;
-}).join('\n');
+const getReadyString = (object) => {
+  const rawResult = object.map((element) => {
+    let resultString = '';
+    if (element.status === 'deleted') {
+      resultString = `  - ${element.key}: ${element.value}`;
+    } else if (element.status === 'added') {
+      resultString = `  + ${element.key}: ${element.value}`;
+    } else if (element.status === 'changed') {
+      resultString = `  - ${element.key}: ${element.valueFirst}\n  + ${element.key}: ${element.valueSecond}`;
+    } else if (element.status === 'unchanged') {
+      resultString = `    ${element.key}: ${element.value}`;
+    }
+    return resultString;
+  }).join('\n');
+  return `{\n${rawResult}\n}`;
+};
 
 export default function genDiff(file1, file2) {
   const readFile1 = readFileSync(file1, 'utf-8');

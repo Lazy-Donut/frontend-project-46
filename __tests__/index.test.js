@@ -9,12 +9,14 @@ const __dirname = dirname(__filename);
 test('should return the correct difference string', () => {
   const file1 = '__fixtures__/file1.json';
   const file2 = '__fixtures__/file2.json';
-  const expectedDiff = `- follow: false
-  host: hexlet.io
-- proxy: 123.234.53.22
-- timeout: 50
-+ timeout: 20
-+ verbose: true`;
+  const expectedDiff = `{
+  - follow: false
+    host: hexlet.io
+  - proxy: 123.234.53.22
+  - timeout: 50
+  + timeout: 20
+  + verbose: true
+}`;
   expect(genDiff(file1, file2)).toEqual(expectedDiff);
 });
 
