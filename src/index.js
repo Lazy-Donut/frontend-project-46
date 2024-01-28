@@ -1,6 +1,5 @@
-import parseFile from '../src/parsers.js';
 import _ from 'lodash';
-
+import parseFile from './parsers.js';
 
 const getReadyString = (object) => {
   const rawResult = object.map((element) => {
@@ -20,7 +19,6 @@ const getReadyString = (object) => {
 };
 
 export default function genDiff(file1, file2) {
-
   const obj1 = parseFile(file1);
   const obj2 = parseFile(file2);
 
