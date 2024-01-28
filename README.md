@@ -4,3 +4,5 @@
 <a href="https://codeclimate.com/github/Lazy-Donut/frontend-project-46/maintainability"><img src="https://api.codeclimate.com/v1/badges/74cbacdd896628c8a10f/maintainability" /></a>
 
 <a href="https://codeclimate.com/github/Lazy-Donut/frontend-project-46/test_coverage"><img src="https://api.codeclimate.com/v1/badges/74cbacdd896628c8a10f/test_coverage" /></a>
+
+[![Node CI](https://github.com/Lazy-Donut/frontend-project-46/actions/workflows/main.yml/badge.svg)](https://github.com/Lazy-Donut/frontend-project-46/actions/workflows/main.yml)

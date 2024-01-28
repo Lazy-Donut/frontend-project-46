@@ -1,5 +1,6 @@
-import { readFileSync } from 'node:fs';
+import parseFile from '../src/parsers.js';
 import _ from 'lodash';
+
 
 const getReadyString = (object) => {
   const rawResult = object.map((element) => {
@@ -19,11 +20,9 @@ const getReadyString = (object) => {
 };
 
 export default function genDiff(file1, file2) {
-  const readFile1 = readFileSync(file1, 'utf-8');
-  const readFile2 = readFileSync(file2, 'utf-8');
 
-  const obj1 = JSON.parse(readFile1);
-  const obj2 = JSON.parse(readFile2);
+  const obj1 = parseFile(file1);
+  const obj2 = parseFile(file2);
 
   const arr1 = Object.entries(obj1);
   const arr2 = Object.entries(obj2);

@@ -7,6 +7,10 @@ The hexlet-check.yml file is responsible for running these tests - do not delete
 ```
 node bin/gendiff file1.json file2.json
 ```
-### Демо
+### Демо JSON
 
 <a href="https://asciinema.org/a/AYoTk0ycpRgdxuaMcfKmzaWPd" target="_blank"><img src="https://asciinema.org/a/AYoTk0ycpRgdxuaMcfKmzaWPd.svg" /></a>
+
+### Демо YAML
+
+<a href="https://asciinema.org/a/rbGTRGnarReRRTeDhWUdLwt0W" target="_blank"><img src="https://asciinema.org/a/rbGTRGnarReRRTeDhWUdLwt0W.svg" /></a>
